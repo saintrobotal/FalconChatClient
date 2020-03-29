@@ -42,15 +42,15 @@ public class ClientMainForm extends JFrame {
 	 * Create the frame.
 	 */
 	public ClientMainForm() {
-		setTitle("Client");
 		setResizable(false);
+		setTitle("Client");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1160, 680);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		this.setLocationRelativeTo(null);
 		JLabel UserNameLabel = new JLabel("Hello World!");
 		UserNameLabel.setFont(new Font("Keep Calm Med", Font.PLAIN, 14));
 		UserNameLabel.setForeground(Color.WHITE);
@@ -80,6 +80,8 @@ public class ClientMainForm extends JFrame {
 		ContactButton.setBorderPainted(false);
 		ContactButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				InitProg.cmf.setVisible(false);
+				InitProg.cc.setVisible(true);
 				//ClientContact.java∑Œ ¿Ãµø
 			}
 		});
@@ -99,7 +101,7 @@ public class ClientMainForm extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\strea\\Downloads\\Webp.net-resizeimage.png"));
+		lblNewLabel.setIcon(new ImageIcon(ClientMainForm.class.getResource("/images/FalconChatClient.png")));
 		lblNewLabel.setBounds(0, 0, 1152, 648);
 		contentPane.add(lblNewLabel);
 	}

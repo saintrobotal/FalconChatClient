@@ -48,6 +48,7 @@ public class ClientContact extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		this.setLocationRelativeTo(null);
 		
 		Usertf = new JTextField();
 		Usertf.setColumns(10);
@@ -86,7 +87,7 @@ public class ClientContact extends JFrame {
 		contentPane.add(Contactlist);
 		
 		JLabel BackGround = new JLabel("");
-		BackGround.setIcon(new ImageIcon("C:\\Users\\strea\\Desktop\\falconchatclientcontact.png"));
+		BackGround.setIcon(new ImageIcon(ClientContact.class.getResource("/images/falconchatclientcontact.png")));
 		BackGround.setBounds(0, 0, 700, 499);
 		contentPane.add(BackGround);
 	}

@@ -55,6 +55,7 @@ public class ClientForm extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		this.setLocationRelativeTo(null);
 		
 		JButton LoginButton = new JButton("");
 		LoginButton.setOpaque(false);
@@ -94,8 +95,18 @@ public class ClientForm extends JFrame {
 		PWtf.setBounds(18, 250, 265, 25);
 		contentPane.add(PWtf);
 		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InitProg.cf.setVisible(false);
+				InitProg.cmf.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(90, 308, 89, 23);
+		contentPane.add(btnNewButton);
+		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\strea\\Desktop\\ClientLogin.png"));
+		lblNewLabel.setIcon(new ImageIcon(ClientForm.class.getResource("/images/ClientLogin.png")));
 		lblNewLabel.setBounds(0, 0, 300, 500);
 		contentPane.add(lblNewLabel);
 	}
